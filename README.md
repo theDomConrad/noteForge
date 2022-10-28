@@ -2,7 +2,7 @@
 
 ## Description
 
-Here we have a wonderful, wonderful note taking app. [Here is a link to the application](https://noteforge.herokuapp.com/notes)
+Here we have a wonderful, wonderful note taking app. [Here is a link to the application](https://noteforge.herokuapp.com/)
 A user may open the app and take notes! 
 
 ## How to use

@@ -3,7 +3,7 @@ const express = require("express")
 const fs = require("fs")
 const path = require('path')
 let noteDB = require("./db/db.json")
-const PORT = precess.env.port || 3001;
+const PORT = process.env.port || 3001;
 const app = express();
 
 app.use(express.json());

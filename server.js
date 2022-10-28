@@ -3,7 +3,7 @@ const express = require("express")
 const fs = require("fs")
 const path = require('path')
 let noteDB = require("./db/db.json")
-const PORT = 3001;
+const PORT = precess.env.port || 3001;
 const app = express();
 
 app.use(express.json());
@@ -56,13 +56,13 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-    console.info(`${req.method} request received to add NOTE!!!`);
+    console.info(`${req.method} request received to DELETE NOTE!!!`); //making sure we are getting in here
     
-    let idFinder = req.params.id;
+    let idFinder = req.params.id; //variable set to determine id of clicked note
 
-    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+    fs.readFile('./db/db.json', 'utf8', (err, data) => { //reading our db.json so we may parse it for desired note
         if (err) {
-            console.error(err);
+            console.error(err); //if there is no error we do the work
         } else {
             const choppedNotes = JSON.parse(data);
 
